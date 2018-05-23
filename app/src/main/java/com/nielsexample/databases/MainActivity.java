@@ -17,15 +17,17 @@ public class MainActivity extends AppCompatActivity {
  ...
  //---get a contact---
  ...
+ //---update contact---
+ ...
  db.close();
  */
-        //---update contact---
+        //---delete a contact---
         db.open();
-        if (db.updateContact(1, "Oscar Diggs", "oscar@oscardiggs.com"))
-            Toast.makeText(this, "Update successful.",
+        if (db.deleteContact(1))
+            Toast.makeText(this, "Delete successful.",
                     Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(this, "Update failed.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Delete failed.", Toast.LENGTH_LONG).show();
         db.close();
     }
 }
